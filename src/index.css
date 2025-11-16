@@ -5,7 +5,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100vw;
   height: 100vh;
   background: white;
@@ -15,6 +15,7 @@ body {
 
   .form-wrapper {
     width: 370px;
+    margin-top: 85px;
     form {
       border-radius: 6px;
       padding: 10px 0;

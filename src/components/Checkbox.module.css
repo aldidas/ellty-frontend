@@ -5,20 +5,22 @@
   width: 326px;
   height: 26px;
   padding: 8px 22px;
+  /* label hovered */
   &:hover {
     cursor: pointer;
-    input[type="checkbox"] {
+    input[type="checkbox"]:not(:checked) {
       border: 1px solid #bdbdbd;
       background-image: url("../assets/check-hover.svg");
     }
     input[type="checkbox"]:checked {
-      border: 1px solid #5087f8;
+      border: 1px solid #2469f6;
       background-color: #5087f8;
       background-image: url("../assets/check-active.svg");
     }
   }
+  /* label active / clicked */
   &:active {
-    input[type="checkbox"] {
+    input[type="checkbox"]:not(:checked) {
       border: 1px solid #bdbdbd;
       background-image: url("../assets/check-clicked.svg");
       box-shadow: 0 0 0 3px rgba(36, 105, 246, 0.1);
@@ -26,7 +28,7 @@
     input[type="checkbox"]:checked {
       border: 1px solid #2469f6;
       background-color: #2469f6;
-      background-image: url("../assets/check-active.svg");
+      box-shadow: 0 0 0 3px rgba(36, 105, 246, 0.1);
     }
   }
 }
@@ -46,6 +48,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 60%;
+  &:hover {
+    cursor: pointer;
+  }
   &:active {
     border: 1px solid #bdbdbd;
     background-image: url("../assets/check-clicked.svg");

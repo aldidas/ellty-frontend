@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   padding: 0;
@@ -11,7 +11,7 @@ body {
   background: white;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  color: #1F2128;
+  color: #1f2128;
 
   .form-wrapper {
     width: 370px;
@@ -21,7 +21,8 @@ body {
       padding: 10px 0;
       background: white;
       border: 1px solid #eee;
-      filter: drop-shadow(0 8px 15px rgba(20, 20, 20, 0.12)) drop-shadow(0 0 4px rgba(20, 20, 20, 0.1));
+      filter: drop-shadow(0 8px 15px rgba(20, 20, 20, 0.12))
+        drop-shadow(0 0 4px rgba(20, 20, 20, 0.1));
       ul {
         list-style: none;
         padding: 0;

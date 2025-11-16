@@ -1,36 +1,39 @@
 import { useState, useCallback } from "react";
 import Checkbox from "./components/Checkbox";
 import Button from "./components/Button";
-import type { ChangeEvent, FormEvent } from 'react'
+import type { ChangeEvent, FormEvent } from "react";
 
 function App() {
   const [all, setAll] = useState<boolean>(false);
   const [form, setForm] = useState<Record<string, boolean>>({
-    "page1": false,
-    "page2": false,
-    "page3": false,
-    "page4": false,
+    page1: false,
+    page2: false,
+    page3: false,
+    page4: false,
   });
 
-  const handleChange = useCallback((event: ChangeEvent<HTMLInputElement>): void => {
-    const element = event.target as HTMLInputElement
-    const name = element.name
-    if (!name) return
-    setForm(prevForm => ({
-      ...prevForm,
-      [name]: !prevForm[name]
-    }));
-  }, []);
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>): void => {
+      const element = event.target as HTMLInputElement;
+      const name = element.name;
+      if (!name) return;
+      setForm((prevForm) => ({
+        ...prevForm,
+        [name]: !prevForm[name],
+      }));
+    },
+    [],
+  );
 
   const handleAllChange = useCallback((): void => {
-    setAll(prevAll => !prevAll);
+    setAll((prevAll) => !prevAll);
   }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
     console.log({
       ...form,
-      all
+      all,
     });
   }
 
